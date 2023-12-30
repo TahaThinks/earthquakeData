@@ -25,6 +25,7 @@ for eq_dict in all_eq_dicts:
     lon = eq_dict['geometry']['coordinates'][0]
     lan = eq_dict['geometry']['coordinates'][1]
     title = eq_dict['properties']['title']
+
     mags.append(mag)
     lons.append(lon)
     lats.append(lan)
@@ -40,6 +41,7 @@ data = [{
     'type':'scattergeo',
     'lon':lons,
     'lat':lats,
+    'text':hover_texts,
     'marker':{
         'size':[5*mag for mag in mags],
         'color':mags,
