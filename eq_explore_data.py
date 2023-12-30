@@ -16,7 +16,7 @@ all_eq_dicts = all_eq_data['features']
 # print(len(all_eq_dicts))
 
 
-mags,lons,lats=[],[],[]
+mags,lons,lats,hover_texts=[],[],[],[]
 
 # Extract Magnitude, Longitude  and Latitude of every Earthquake:
 
@@ -24,10 +24,11 @@ for eq_dict in all_eq_dicts:
     mag = eq_dict['properties']['mag']
     lon = eq_dict['geometry']['coordinates'][0]
     lan = eq_dict['geometry']['coordinates'][1]
-    
+    title = eq_dict['properties']['title']
     mags.append(mag)
     lons.append(lon)
     lats.append(lan)
+    hover_texts.append(title)
 
 
 # Map the earthquake:
