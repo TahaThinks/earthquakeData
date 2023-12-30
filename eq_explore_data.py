@@ -30,11 +30,14 @@ for eq_dict in all_eq_dicts:
     lats.append(lan)
 
 
-# Map the earthquake:
+# Map the earthquake, 'marker' icreases size:
 data = [{
     'type':'scattergeo',
     'lon':lons,
     'lat':lats,
+    'marker':{
+        'size':[5*mag for mag in mags]
+    }
 }]
 my_layout = Layout(title="Global Earthquakes")
 
