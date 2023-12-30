@@ -1,4 +1,6 @@
 import json
+from plotly.graph_objs import Scattergeo, Layout
+from plotly import offline
 
 filename = 'data\eq_data_1_day_m1.json'
 
